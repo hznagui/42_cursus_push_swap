@@ -6,8 +6,9 @@
 /*   By: hznagui <hznagui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 17:02:50 by hznagui           #+#    #+#             */
-/*   Updated: 2022/12/08 17:10:41 by hznagui          ###   ########.fr       */
+/*   Updated: 2022/12/11 15:35:33 by hznagui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void swap_a()
+#include "push_swap.h"
+void swap_first2()

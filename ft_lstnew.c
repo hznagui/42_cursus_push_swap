@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hznagui <hznagui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/08 15:57:19 by hznagui           #+#    #+#             */
-/*   Updated: 2022/12/11 16:20:01 by hznagui          ###   ########.fr       */
+/*   Created: 2022/10/25 22:01:50 by hznagui           #+#    #+#             */
+/*   Updated: 2022/12/11 16:47:12 by hznagui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "push_swap.h"
-int main(){
-    int z = ft_atoi("51595189151945");
-    /* Terminating program using exit */
-    return(printf("%d",z));
-    printf("It won't get printed ever\n");  
-    return 0;
+
+t_list	*ft_lstnew(void *content)
+{
+	t_list	*p;
+
+	p = malloc (sizeof(t_list));
+	if (!p)
+		return (0);
+	p -> next = NULL;
+	p -> content = content;
+	return (p);
 }

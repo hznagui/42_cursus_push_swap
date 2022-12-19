@@ -6,7 +6,7 @@
 /*   By: hznagui <hznagui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 16:13:24 by hznagui           #+#    #+#             */
-/*   Updated: 2022/12/08 17:02:24 by hznagui          ###   ########.fr       */
+/*   Updated: 2022/12/11 15:31:40 by hznagui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,4 +19,9 @@
 
 char	**ft_split(char const *s, char c);
 int	ft_atoi(const char *str);
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}t_list;
 #endif

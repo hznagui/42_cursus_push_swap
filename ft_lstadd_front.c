@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hznagui <hznagui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/08 15:57:19 by hznagui           #+#    #+#             */
-/*   Updated: 2022/12/11 16:20:01 by hznagui          ###   ########.fr       */
+/*   Created: 2022/10/25 22:18:25 by hznagui           #+#    #+#             */
+/*   Updated: 2022/12/11 16:47:26 by hznagui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "push_swap.h"
-int main(){
-    int z = ft_atoi("51595189151945");
-    /* Terminating program using exit */
-    return(printf("%d",z));
-    printf("It won't get printed ever\n");  
-    return 0;
+
+void	ft_lstadd_front(t_list **lst, t_list *new)
+{
+	if (!new || !lst)
+		return ;
+	new->next = *lst;
+	*lst = new;
 }

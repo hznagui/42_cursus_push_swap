@@ -10,15 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-static int	ft_return(int c)
-{
-	if (c == 1)
-		return (-1);
-	else
-		return (0);
-}
+#include "push_swap.h"
 
 int	ft_atoi(const char *str)
 {
@@ -41,8 +33,8 @@ int	ft_atoi(const char *str)
 	while (str[i] >= '0' && str[i] <= '9')
 	{
 		z = 10 * z + (str[i] - '0');
-		if (z > 9223372036854775807)
-			return (ft_return(c));
+		if ((z > 2147483647 && c == 1 )|| (z > 2147483648 && c == -1))
+			exit (-1);
 		i++;
 	}
 	return (z * c);

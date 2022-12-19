@@ -1,22 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*    ft_error.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hznagui <hznagui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/08 15:57:19 by hznagui           #+#    #+#             */
-/*   Updated: 2022/12/11 16:20:01 by hznagui          ###   ########.fr       */
+/*   Created: 2022/12/19 12:33:05 by hznagui           #+#    #+#             */
+/*   Updated: 2022/12/19 12:46:04 by hznagui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include "push_swap.h"
-int main(){
-    int z = ft_atoi("51595189151945");
-    /* Terminating program using exit */
-    return(printf("%d",z));
-    printf("It won't get printed ever\n");  
-    return 0;
+char *ft_error(char **argc, int argv)
+{
+ int i;
+ int a;
+ a = 0;
+ i = 0;
+ while(a <= argv)
+ {
+    while(argc[a][i] != '\0')
+    {
+        if (is_digit(argc[a][i]))
+        {
+            return("Error\n");
+        }
+        i++;        
+    }
+    i = 0;
+    a++;
+ }    
 }

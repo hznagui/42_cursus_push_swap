@@ -1,31 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hznagui <hznagui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/08 16:13:24 by hznagui           #+#    #+#             */
-/*   Updated: 2022/12/21 16:17:18 by hznagui          ###   ########.fr       */
+/*   Created: 2022/10/15 21:29:38 by hznagui           #+#    #+#             */
+/*   Updated: 2022/12/21 14:21:56 by hznagui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-#define PUSH_SWAP_H
+#include "push_swap.h"
 
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <limits.h>
-# define value 5000000000
-char	**ft_split(char const *s, char c);
-long long ft_atoi(char *str);
-size_t	ft_strlen(char *s);
-char	*ft_strjoin(char *s1, char *s2);
-
-typedef struct s_list
+char	*ft_strjoin(char *s1, char *s2)
 {
-	void			*content;
-	struct s_list	*next;
-}t_list;
-#endif
+	size_t	y;
+	size_t	a;
+	char	*p;
+
+	a = 0;
+	y = 0;
+	if (!s1 || !s2)
+		return (0);
+	p = malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
+	if (!p)
+		return (0);
+	while (y < ft_strlen(s1))
+	{
+		p[y] = s1[y];
+		y++;
+	}
+	while (a <= ft_strlen(s2))
+	{
+		p[y + a] = s2[a];
+		a++;
+	}
+	return (p);
+}

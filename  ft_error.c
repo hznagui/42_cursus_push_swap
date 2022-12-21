@@ -6,27 +6,7 @@
 /*   By: hznagui <hznagui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 12:33:05 by hznagui           #+#    #+#             */
-/*   Updated: 2022/12/19 12:46:04 by hznagui          ###   ########.fr       */
+/*   Updated: 2022/12/20 12:05:50 by hznagui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_error(char **argc, int argv)
-{
- int i;
- int a;
- a = 0;
- i = 0;
- while(a <= argv)
- {
-    while(argc[a][i] != '\0')
-    {
-        if (is_digit(argc[a][i]))
-        {
-            return("Error\n");
-        }
-        i++;        
-    }
-    i = 0;
-    a++;
- }    
-}

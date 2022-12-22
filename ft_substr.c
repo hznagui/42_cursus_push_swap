@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
-static size_t	leakskiller(char const *s, unsigned int start, size_t len)
+static size_t	leakskiller(char*s, unsigned int start, size_t len)
 {
 	if (ft_strlen(s + start) >= len)
 	{
@@ -24,7 +24,7 @@ static size_t	leakskiller(char const *s, unsigned int start, size_t len)
 	}
 }
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char *s, unsigned int start, size_t len)
 {
 	size_t	o;
 	char	*p;

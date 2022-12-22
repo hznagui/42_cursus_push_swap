@@ -6,11 +6,11 @@
 /*   By: hznagui <hznagui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 17:11:43 by hznagui           #+#    #+#             */
-/*   Updated: 2022/11/08 18:46:12 by hznagui          ###   ########.fr       */
+/*   Updated: 2022/12/22 17:25:32 by hznagui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
 static size_t	nbr_of_words(char *s, char c)
 {
@@ -37,52 +37,49 @@ static size_t	nbr_of_words(char *s, char c)
 	return (l);
 }
 
-static char	**free_all(char **str, size_t max)
-{
-	int	i;
-
-	i = max;
-	while (i >= 0)
-		free(str[i--]);
-	free (str);
-	return (0);
-}
-
-static char	**ft_return(char *s, char c, char **p)
+static t_list	*ft_return(char **s, char c, t_list *p)
 {
 	size_t	e;
 	size_t	u;
 	size_t	a;
+	size_t	h;
+	t_list	*j;
 
 	u = 0;
 	a = 0;
-	while (u < nbr_of_words((char *)s, c))
+	h = 1;
+	while (s[h])
 	{
-		while (s[a] == c && s[a] != '\0')
-			a++;
-		e = a;
-		while (s[e] != c && s[e] != '\0')
-			e++;
-		p[u] = ft_substr((char *)s, a, e - a);
-		if (!p[u])
+		if (s[h] [a] == '\0')
+			return(p);
+		while (u < nbr_of_words(s[h], c))
 		{
-			return (free_all(p, u));
+			while (s[h][a] == c && s[h][a] != '\0')
+				a++;
+			e = a;
+			while (s[h][e] != c && s[h][e] != '\0')
+				e++;
+			j = ft_lstnew((void *)ft_atoi(&s[h][a]));
+			if (!j)
+				return (ft_lstiter(p));
+			ft_lstadd_back(&p, j);
+			u++;
+			a = e;
 		}
-		u++;
-		a = e;
+		u = 0;
+		a = 0;
+		h++;
 	}
-	p[u] = NULL;
 	return (p);
 }
 
-char	**ft_split(char const *s, char c)
+t_list	*ft_split(char **s, char c)
 {
-	char	**p;
-
+	t_list	*p;
+	
 	if (!s)
 		return (0);
-	p = malloc((nbr_of_words((char *)s, c) + 1) * (sizeof(char *)));
-	if (!p)
-		return (0);
-	return (ft_return((char *)s, c, p));
+	p = NULL;
+	return (ft_return(s, c, p));
 }
+

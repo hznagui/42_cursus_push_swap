@@ -6,77 +6,32 @@
 /*   By: hznagui <hznagui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 12:31:40 by hznagui           #+#    #+#             */
-/*   Updated: 2022/12/22 18:07:13 by hznagui          ###   ########.fr       */
+/*   Updated: 2022/12/23 15:17:39 by hznagui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <unistd.h>
 
-void	abort(void)
+void ft_ra(t_list **p)
 {
-	write(2, "Error\n", 6);
-	exit (1);
+	t_list *first;
+	first = *p;
+	*p = first->next;
+	ft_lstadd_back(p,first);
 }
-
-void ft_error(char **argv, int argc)
-{
-	int i;
-	int a;
-
-	a = 1;
-	i = 0;
-	while(a < argc)
-	{
-		if(argv[a][0] == '\0')
-			abort();
-		while(argv[a][i] != '\0')
-		{
-			if ((argv[a][i] >= 64 && argv[a][i] <= 127) || (argv[a][i] >= 33 && argv[a][i] <= 44) || (argv[a][i] >= '.' && argv[a][i] <= '/') || (argv[a][i] == '-' && (argv[a][i + 1] > '9' || argv[a][i + 1] < '0' || argv[a][i - 1] != '\0' || argv[a][i - 1] != ' '))  )
-				abort();
-			i++;
-	   }
-	   i = 0;
-	   a++;
-	}
-}
-
-void ft_check_double(t_list *p)
-{
-	t_list *h;
-	t_list *o;
-
-	h = p;
-	while (h)
-	{
-		if ((long long)h->content > INT_MAX || (long long)h->content < INT_MIN)
-			abort();
-		o = h->next;
-		while (o)
-		{
-			if (o->content == h->content)
-				abort();
-			else
-			{
-				o = o->next;
-			}
-		}
-		h = h->next;
-	}
-}
-
 int main(int argc,char **argv)
 {
+	t_list *d;
 	if (argc == 1)
 		return (0);
 	ft_error(argv,argc);
-	t_list *d;
 	d = ft_split(argv,' ');
 	ft_check_double(d);
+	ft_ra(&d);
 	while (d)
 	{
 		printf("%d\n",(int)d->content);
-		d=d->next;
+		d = d->next;
 	}
 	return (0);
 }

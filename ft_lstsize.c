@@ -1,35 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hznagui <hznagui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/19 12:31:40 by hznagui           #+#    #+#             */
-/*   Updated: 2022/12/23 18:03:36 by hznagui          ###   ########.fr       */
+/*   Created: 2022/10/25 22:42:51 by hznagui           #+#    #+#             */
+/*   Updated: 2022/12/23 15:48:04 by hznagui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-
-int main(int argc,char **argv)
+int	ft_lstsize(t_list *lst)
 {
-	t_list *d;
-	if (argc == 1)
+	t_list	*p;
+	int		i;
+
+	if (!lst)
 		return (0);
-	ft_error(argv,argc);
-	d = ft_split(argv,' ');
-	ft_check_double(d);
-	ft_ra(&d);
-	// int  j = ft_lstsize(d);
-	// printf("%d\n", j);
-	int i = 0;
-	while (d)
+	i = 0;
+	p = lst;
+	while (p)
 	{
-		printf("--%d--\n",(int)d->content);
-		d = d->next;
+		p = p -> next;
 		i++;
 	}
-	return (0);
+	return (i);
 }

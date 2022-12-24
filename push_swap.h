@@ -6,7 +6,7 @@
 /*   By: hznagui <hznagui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 16:13:24 by hznagui           #+#    #+#             */
-/*   Updated: 2022/12/23 15:48:47 by hznagui          ###   ########.fr       */
+/*   Updated: 2022/12/24 13:59:20 by hznagui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,8 @@ void ft_error(char **argv, int argc);
 void ft_check_double(t_list *p);
 void ft_switch_firsttwo(t_list **p);
 int	ft_lstsize(t_list *lst);
+void ft_to_the_bottom(t_list **p);
+void to_the_top(t_list **p);
+void push(t_list **stack_src,t_list **stack_dst);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: hznagui <hznagui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 17:11:43 by hznagui           #+#    #+#             */
-/*   Updated: 2022/12/22 17:25:32 by hznagui          ###   ########.fr       */
+/*   Updated: 2022/12/24 14:24:28 by hznagui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,11 @@ static t_list	*ft_return(char **s, char c, t_list *p)
 			ft_lstadd_back(&p, j);
 			u++;
 			a = e;
+		}
+		if(nbr_of_words(s[h],c) == 0)
+		{
+			ft_lstiter(p);
+			abort();
 		}
 		u = 0;
 		a = 0;

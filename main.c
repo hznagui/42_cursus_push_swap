@@ -6,7 +6,7 @@
 /*   By: hznagui <hznagui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 12:31:40 by hznagui           #+#    #+#             */
-/*   Updated: 2022/12/23 18:03:36 by hznagui          ###   ########.fr       */
+/*   Updated: 2022/12/24 13:59:31 by hznagui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,29 @@
 
 int main(int argc,char **argv)
 {
-	t_list *d;
+	t_list *stack1;
+	t_list *stack2;
 	if (argc == 1)
 		return (0);
 	ft_error(argv,argc);
-	d = ft_split(argv,' ');
-	ft_check_double(d);
-	ft_ra(&d);
-	// int  j = ft_lstsize(d);
-	// printf("%d\n", j);
-	int i = 0;
-	while (d)
+	stack1 = ft_split(argv,' ');
+	ft_check_double(stack1);
+	// ft_pa(&stack1,&stack2);
+	// ft_pa(&stack1,&stack2);
+	// ft_pa(&stack1,&stack2);
+	// ft_pa(&stack1,&stack2);
+	while (stack1)
 	{
-		printf("--%d--\n",(int)d->content);
-		d = d->next;
-		i++;
+		printf("--%d--\n",(int)stack1->content);
+		stack1 = stack1->next;
 	}
+	// printf("\ntisa3\n");
+	// while (stack2)
+	// {
+	// 	printf("--%d--\n",(int)stack2->content);
+	// 	stack2 = stack2->next;
+	// }
+	
+	
 	return (0);
 }

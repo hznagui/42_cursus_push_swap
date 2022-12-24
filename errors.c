@@ -6,7 +6,7 @@
 /*   By: hznagui <hznagui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 12:33:05 by hznagui           #+#    #+#             */
-/*   Updated: 2022/12/23 13:36:16 by hznagui          ###   ########.fr       */
+/*   Updated: 2022/12/24 18:48:43 by hznagui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,34 +19,38 @@ void	abort(void)
 }
 //------------------------------------------------------------------------//
 
-void ft_error(char **argv, int argc)
+void	ft_error(char **argv, int argc)
 {
-	int i;
-	int a;
+	int	i;
+	int	a;
 
 	a = 1;
 	i = 0;
-	while(a < argc)
+	while (a < argc)
 	{
-		if(argv[a][0] == '\0')
+		if (argv[a][0] == '\0')
 			abort();
-		while(argv[a][i] != '\0')
+		while (argv[a][i] != '\0')
 		{
-			if ((argv[a][i] >= 64 && argv[a][i] <= 127) || (argv[a][i] >= 33 && argv[a][i] <= 44) || (argv[a][i] >= '.' && argv[a][i] <= '/') || (argv[a][i] == '-' && (argv[a][i + 1] > '9' || argv[a][i + 1] < '0' || argv[a][i - 1] != '\0' || argv[a][i - 1] != ' '))  )
+			if ((argv[a][i] >= 64 && argv[a][i] <= 127) ||
+			(argv[a][i] >= 33 && argv[a][i] <= 44) ||
+			(argv[a][i] >= '.' && argv[a][i] <= '/') ||
+			(argv[a][i] == '-' && (argv[a][i + 1] > '9' ||
+			argv[a][i + 1] < '0' || argv[a][i - 1] != '\0' ||
+			argv[a][i - 1] != ' ')))
 				abort();
 			i++;
-	   }
-	   i = 0;
-	   a++;
+		}
+	i = 0;
+	a++;
 	}
 }
 //------------------------------------------------------------------------//
 
-
-void ft_check_double(t_list *p)
+void	ft_check_double(t_list *p)
 {
-	t_list *h;
-	t_list *o;
+	t_list	*h;
+	t_list	*o;
 
 	h = p;
 	while (h)

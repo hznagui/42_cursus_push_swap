@@ -6,7 +6,7 @@
 /*   By: hznagui <hznagui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 13:06:44 by hznagui           #+#    #+#             */
-/*   Updated: 2022/12/23 13:41:14 by hznagui          ###   ########.fr       */
+/*   Updated: 2022/12/26 12:24:19 by hznagui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,4 +66,21 @@ t_list	*ft_lstnew(void *content)
 	p -> next = NULL;
 	p -> content = content;
 	return (p);
+}
+//------------------------------------------------------------------------//
+int	ft_lstsize(t_list *lst)
+{
+	t_list	*p;
+	int		i;
+
+	if (!lst)
+		return (0);
+	i = 0;
+	p = lst;
+	while (p)
+	{
+		p = p -> next;
+		i++;
+	}
+	return (i);
 }

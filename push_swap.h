@@ -6,7 +6,7 @@
 /*   By: hznagui <hznagui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 16:13:24 by hznagui           #+#    #+#             */
-/*   Updated: 2022/12/24 13:59:20 by hznagui          ###   ########.fr       */
+/*   Updated: 2022/12/26 12:39:56 by hznagui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,22 @@ t_list *ft_lstiter(t_list *lst);
 t_list	*ft_lstnew(void *content);
 void ft_error(char **argv, int argc);
 void ft_check_double(t_list *p);
-void ft_switch_firsttwo(t_list **p);
+void ft_switch_first_two(t_list **p);
 int	ft_lstsize(t_list *lst);
 void ft_to_the_bottom(t_list **p);
 void to_the_top(t_list **p);
 void push(t_list **stack_src,t_list **stack_dst);
+void ft_rr(t_list **stack1, t_list **stack2);
+void ft_rb(t_list **stack2);
+void ft_ra(t_list **stack1);
+void ft_ss(t_list **stack1, t_list **stack2);
+void ft_sb(t_list **p);
+void ft_sa(t_list **p);
+void ft_rrr(t_list **stack1, t_list **stack2);
+void ft_pa(t_list **stack1,t_list **stack2);
+void ft_pb(t_list **stack2, t_list **stack1);
+void ft_rrb(t_list **stack2);
+void ft_rra(t_list **stack1);
+
 
 #endif

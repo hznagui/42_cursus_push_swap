@@ -6,7 +6,7 @@
 #    By: hznagui <hznagui@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/26 12:21:15 by hznagui           #+#    #+#              #
-#    Updated: 2022/12/26 14:28:28 by hznagui          ###   ########.fr        #
+#    Updated: 2022/12/27 11:51:49 by hznagui          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,10 +27,10 @@ all: $(NAME)
 	cc -Wall -Wextra -Werror -c $< -o $@
 
 clean:
-	rm -f $(NAME)
+	rm -f $(OBJ_FILE)
 	
 fclean:	clean
-	rm -f $(NAME) $(OBJ_FILE)
+	rm -f $(NAME) 
 	
 re: fclean $(NAME)
 

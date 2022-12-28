@@ -6,11 +6,11 @@
 #    By: hznagui <hznagui@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/26 12:21:15 by hznagui           #+#    #+#              #
-#    Updated: 2022/12/27 11:51:49 by hznagui          ###   ########.fr        #
+#    Updated: 2022/12/28 11:22:16 by hznagui          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC_FILE = push_swap.c push__swap.c	push___swap.c main.c lst_fonctions.c ft_strlen.c ft_split.c ft_split.c errors.c ft_atoi.c
+SRC_FILE = push_swap.c push__swap.c	push___swap.c main.c lst_fonctions.c ft_strlen.c ft_split.c ft_split.c errors.c ft_atoi.c check.c algorithm.c
 
 NAME = push_swap.a
 

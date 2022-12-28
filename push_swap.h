@@ -6,7 +6,7 @@
 /*   By: hznagui <hznagui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 16:13:24 by hznagui           #+#    #+#             */
-/*   Updated: 2022/12/26 12:39:56 by hznagui          ###   ########.fr       */
+/*   Updated: 2022/12/28 11:21:52 by hznagui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,8 @@ void ft_pa(t_list **stack1,t_list **stack2);
 void ft_pb(t_list **stack2, t_list **stack1);
 void ft_rrb(t_list **stack2);
 void ft_rra(t_list **stack1);
+int ft_check(t_list **start);
+void ft_case_1(t_list **stack1);
 
 
 #endif

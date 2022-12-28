@@ -6,7 +6,7 @@
 /*   By: hznagui <hznagui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/28 10:51:04 by hznagui           #+#    #+#             */
-/*   Updated: 2022/12/28 11:17:24 by hznagui          ###   ########.fr       */
+/*   Updated: 2022/12/28 14:06:28 by hznagui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int ft_check(t_list **start)
     
     while (p->next)
     {
-        if(p->content > p->next->content)
+        if((int)p->content > (int)p->next->content)
         {
             return (1);
         }

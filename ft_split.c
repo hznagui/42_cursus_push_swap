@@ -6,7 +6,7 @@
 /*   By: hznagui <hznagui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 17:11:43 by hznagui           #+#    #+#             */
-/*   Updated: 2022/12/24 18:17:30 by hznagui          ###   ########.fr       */
+/*   Updated: 2022/12/28 13:41:59 by hznagui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ t_list	*create_nodes(char **s, char c, t_list *p, size_t	h)
 		e = a;
 		while (s[h][e] != c && s[h][e] != '\0')
 			e++;
-		j = ft_lstnew((void *)ft_atoi(&s[h][a]));
+		j = ft_lstnew((long long *)ft_atoi(&s[h][a]));
 		if (!j)
 			return (ft_lstiter(p));
 		ft_lstadd_back(&p, j);

@@ -6,7 +6,7 @@
 /*   By: hznagui <hznagui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 12:31:40 by hznagui           #+#    #+#             */
-/*   Updated: 2022/12/28 11:21:39 by hznagui          ###   ########.fr       */
+/*   Updated: 2022/12/28 14:04:58 by hznagui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,10 @@ int main(int argc,char **argv)
 	ft_check_double(stack1);
 	ft_case_1(&stack1);
 	
+	
 	while (stack1)
 	{
-		printf("\n--%d--",(int)stack1->content);
+		printf("\n%d",(int)stack1->content);
 		stack1 = stack1->next;
 	}
 	// printf("\ntisa3\n");

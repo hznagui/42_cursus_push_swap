@@ -6,7 +6,7 @@
 /*   By: hznagui <hznagui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 13:06:44 by hznagui           #+#    #+#             */
-/*   Updated: 2022/12/26 12:24:19 by hznagui          ###   ########.fr       */
+/*   Updated: 2022/12/28 13:37:05 by hznagui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ t_list *ft_lstiter(t_list *lst)
 }
 //------------------------------------------------------------------------//
 
-t_list	*ft_lstnew(void *content)
+t_list	*ft_lstnew(long long *content)
 {
 	t_list	*p;
 

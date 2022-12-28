@@ -6,7 +6,7 @@
 /*   By: hznagui <hznagui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/28 11:21:25 by hznagui           #+#    #+#             */
-/*   Updated: 2022/12/28 11:21:33 by hznagui          ###   ########.fr       */
+/*   Updated: 2022/12/28 14:04:44 by hznagui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,40 @@ void ft_case_1(t_list **stack1)
 		p = *stack1;
 		while (p->next)
 			p = p->next;
-		if (p->content < (*stack1)->content)
+		if ((int)p->content < (int)(*stack1)->content)
 			ft_ra(stack1);
 		else
 			ft_sa(stack1);
 	}
+}
+//------------------------------------------------------------------------//
+void push_the_smallest(t_list **stack1, t_list **stack2)
+{
+	t_list *p;
+	t_list *l;
+	p = *stack1;
+	l = *stack1;
+	while (p)
+	{
+		if ((int)p->content < (int)l->content)
+			l=p;
+		p = p->next;
+	}
+	while (l->content != (*stack1)->content)
+	{
+		if (ft_lstsize(l) >= 3)
+			ft_ra(stack1);
+		else
+			ft_rra(stack1);
+	}
+	ft_pa(stack1,stack2);
+}
+//------------------------------------------------------------------------//
+void ft_case_2(t_list **stack1, t_list **stack2)
+{
+	push_the_smallest(stack1,stack2);
+	push_the_smallest(stack1,stack2);
+	ft_case_1(stack1);
+	ft_pb(stack2,stack1);
+	ft_pb(stack2,stack1);
 }

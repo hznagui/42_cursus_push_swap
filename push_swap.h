@@ -6,7 +6,7 @@
 /*   By: hznagui <hznagui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 16:13:24 by hznagui           #+#    #+#             */
-/*   Updated: 2022/12/28 14:01:02 by hznagui          ###   ########.fr       */
+/*   Updated: 2022/12/28 15:16:09 by hznagui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ void ft_rra(t_list **stack1);
 int ft_check(t_list **start);
 void ft_case_1(t_list **stack1);
 void ft_case_2(t_list **stack1, t_list **stack2);
+void push_the_smallest(t_list **stack1, t_list **stack2);
 
 
 #endif

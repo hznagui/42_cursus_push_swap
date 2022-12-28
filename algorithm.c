@@ -6,7 +6,7 @@
 /*   By: hznagui <hznagui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/28 11:21:25 by hznagui           #+#    #+#             */
-/*   Updated: 2022/12/28 14:04:44 by hznagui          ###   ########.fr       */
+/*   Updated: 2022/12/28 15:26:47 by hznagui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void push_the_smallest(t_list **stack1, t_list **stack2)
 	}
 	while (l->content != (*stack1)->content)
 	{
-		if (ft_lstsize(l) >= 3)
+		if (ft_lstsize(l) >= ft_lstsize(*stack1)/2)
 			ft_ra(stack1);
 		else
 			ft_rra(stack1);

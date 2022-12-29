@@ -6,7 +6,7 @@
 /*   By: hznagui <hznagui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 16:13:24 by hznagui           #+#    #+#             */
-/*   Updated: 2022/12/28 15:16:09 by hznagui          ###   ########.fr       */
+/*   Updated: 2022/12/29 14:32:29 by hznagui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ typedef struct s_list
 {
 	long long			*content;
 	struct s_list	*next;
+	int index;
 }t_list;
 
 t_list *ft_split(char **s, char c);
@@ -31,7 +32,7 @@ size_t	ft_strlen(char *s);
 void	ft_lstadd_back(t_list **lst, t_list *new);
 t_list	*ft_lstnew(long long *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
-t_list *ft_lstiter(t_list *lst);
+t_list *ft_lstclear(t_list **lst);
 void ft_error(char **argv, int argc);
 void ft_check_double(t_list *p);
 void ft_switch_first_two(t_list **p);
@@ -54,6 +55,7 @@ int ft_check(t_list **start);
 void ft_case_1(t_list **stack1);
 void ft_case_2(t_list **stack1, t_list **stack2);
 void push_the_smallest(t_list **stack1, t_list **stack2);
+void ft_index(t_list **stack1);
 
 
 #endif

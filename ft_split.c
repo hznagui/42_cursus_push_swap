@@ -6,7 +6,7 @@
 /*   By: hznagui <hznagui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 17:11:43 by hznagui           #+#    #+#             */
-/*   Updated: 2022/12/28 13:41:59 by hznagui          ###   ########.fr       */
+/*   Updated: 2022/12/29 10:38:11 by hznagui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ t_list	*create_nodes(char **s, char c, t_list *p, size_t	h)
 			e++;
 		j = ft_lstnew((long long *)ft_atoi(&s[h][a]));
 		if (!j)
-			return (ft_lstiter(p));
+			return (ft_lstclear(&p));
 		ft_lstadd_back(&p, j);
 		a = e;
 		u++;

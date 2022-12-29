@@ -6,7 +6,7 @@
 /*   By: hznagui <hznagui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 13:06:44 by hznagui           #+#    #+#             */
-/*   Updated: 2022/12/28 13:37:05 by hznagui          ###   ########.fr       */
+/*   Updated: 2022/12/29 14:32:10 by hznagui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,22 +40,22 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 	*lst = new;
 }
 //------------------------------------------------------------------------//
-t_list *ft_lstiter(t_list *lst)
+t_list	*ft_lstclear(t_list **lst)
 {
 	t_list	*p;
 
 	if (!lst)
-		return (0);
-	p = lst;
-	while (p)
+		abort();
+	while ((*lst))
 	{
-		free(p -> content);
-		p = p -> next;
+		p = (*lst);
+		free((*lst)->content);
+		*lst = (*lst)->next;
+		free (p);
 	}
-	return (0);
+	abort();
 }
 //------------------------------------------------------------------------//
-
 t_list	*ft_lstnew(long long *content)
 {
 	t_list	*p;
@@ -65,6 +65,7 @@ t_list	*ft_lstnew(long long *content)
 		return (0);
 	p -> next = NULL;
 	p -> content = content;
+	p -> index = 0;
 	return (p);
 }
 //------------------------------------------------------------------------//

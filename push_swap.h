@@ -6,7 +6,7 @@
 /*   By: hznagui <hznagui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 16:13:24 by hznagui           #+#    #+#             */
-/*   Updated: 2022/12/29 14:32:29 by hznagui          ###   ########.fr       */
+/*   Updated: 2022/12/30 19:06:46 by hznagui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,9 @@ void ft_case_1(t_list **stack1);
 void ft_case_2(t_list **stack1, t_list **stack2);
 void push_the_smallest(t_list **stack1, t_list **stack2);
 void ft_index(t_list **stack1);
+void push_the_biggest(t_list **stack1, t_list **stack2);
+void ft_case_3(t_list **stack1, t_list **stack2);
+void ft_case_4(t_list **stack1, t_list **stack2);
 
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: hznagui <hznagui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/28 11:21:25 by hznagui           #+#    #+#             */
-/*   Updated: 2022/12/31 17:44:53 by hznagui          ###   ########.fr       */
+/*   Updated: 2022/12/31 21:03:47 by hznagui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void ft_case_3(t_list **stack1, t_list **stack2)
 	int oldp1;
 
 	p1 = 0;
-	while (ft_lstsize(*stack1)>3)
+	while (ft_lstsize(*stack1)>2)
 	{
 		oldp1 = p1;
 		p1 += ft_lstsize(*stack1)/3;
@@ -62,7 +62,8 @@ void ft_case_3(t_list **stack1, t_list **stack2)
 				ft_ra(stack1);
 		}
 	}
-	ft_case_1(stack1);
+	while (*stack1)
+		push_the_smallest(stack1,stack2);
 }
 //------------------------------------------------------------------------//
 void ft_case_4(t_list **stack1, t_list **stack2)
@@ -72,10 +73,10 @@ void ft_case_4(t_list **stack1, t_list **stack2)
 	int oldp1;
 	
 	p1 = 0;
-	while (ft_lstsize(*stack1)>8)
+	while (ft_lstsize(*stack1)>12)
 	{
 		oldp1 = p1;
-		p1 += ft_lstsize(*stack1)/9;
+		p1 += ft_lstsize(*stack1)/5;
 		p2 = p1 - ((p1 - oldp1) / 2);
 		while (ft_lstsize(*stack2) < p1)
 		{	
@@ -88,8 +89,10 @@ void ft_case_4(t_list **stack1, t_list **stack2)
 			else
 				ft_ra(stack1);
 		}
+		// printf("size of stack1 ==%i== \n",ft_lstsize(*stack1));
 	}
-	ft_case_5(stack1,stack2);
+	while (*stack1)
+		push_the_smallest(stack1,stack2);
 }
 //------------------------------------------------------------------------//
 void ft_case_5(t_list **stack1, t_list **stack2)

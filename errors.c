@@ -6,7 +6,7 @@
 /*   By: hznagui <hznagui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 12:33:05 by hznagui           #+#    #+#             */
-/*   Updated: 2022/12/27 13:47:52 by hznagui          ###   ########.fr       */
+/*   Updated: 2022/12/31 15:04:29 by hznagui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,9 @@ void	ft_error(char **argv, int argc)
 			if ((argv[a][i] >= 64 && argv[a][i] <= 127) ||
 			(argv[a][i] >= 33 && argv[a][i] <= 44) ||
 			(argv[a][i] >= '.' && argv[a][i] <= '/') ||
-			(argv[a][i] == '-' && (argv[a][i + 1] > '9' ||
-			argv[a][i + 1] < '0') && (argv[a][i - 1] != '\0' ||
-			argv[a][i - 1] != ' ')))
+			(argv[a][i] == '-' && ((argv[a][i + 1] > '9' ||
+			argv[a][i + 1] < '0') || (argv[a][i - 1] != '\0' &&
+			argv[a][i - 1] != ' '))))
 				abort();
 			i++;
 		}

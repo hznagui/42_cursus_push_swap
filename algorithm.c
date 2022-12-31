@@ -6,7 +6,7 @@
 /*   By: hznagui <hznagui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/28 11:21:25 by hznagui           #+#    #+#             */
-/*   Updated: 2022/12/30 19:09:09 by hznagui          ###   ########.fr       */
+/*   Updated: 2022/12/31 17:44:53 by hznagui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,8 @@ void ft_case_3(t_list **stack1, t_list **stack2)
 	int p1;
 	int p2;
 	int oldp1;
+
 	p1 = 0;
-	p2 = 0;
-	ft_index(stack1);
 	while (ft_lstsize(*stack1)>3)
 	{
 		oldp1 = p1;
@@ -64,10 +63,6 @@ void ft_case_3(t_list **stack1, t_list **stack2)
 		}
 	}
 	ft_case_1(stack1);
-	while (*stack2)
-	{
-		push_the_biggest(stack1,stack2);
-	}
 }
 //------------------------------------------------------------------------//
 void ft_case_4(t_list **stack1, t_list **stack2)
@@ -77,10 +72,10 @@ void ft_case_4(t_list **stack1, t_list **stack2)
 	int oldp1;
 	
 	p1 = 0;
-	while (ft_lstsize(*stack1)>5)
+	while (ft_lstsize(*stack1)>8)
 	{
 		oldp1 = p1;
-		p1 += ft_lstsize(*stack1)/6;
+		p1 += ft_lstsize(*stack1)/9;
 		p2 = p1 - ((p1 - oldp1) / 2);
 		while (ft_lstsize(*stack2) < p1)
 		{	
@@ -94,5 +89,13 @@ void ft_case_4(t_list **stack1, t_list **stack2)
 				ft_ra(stack1);
 		}
 	}
-	ft_case_2(stack1,stack2);
+	ft_case_5(stack1,stack2);
+}
+//------------------------------------------------------------------------//
+void ft_case_5(t_list **stack1, t_list **stack2)
+{
+	while (*stack1)
+		push_the_smallest(stack1,stack2);
+	while (*stack2)
+		ft_pa(stack1,stack2);
 }

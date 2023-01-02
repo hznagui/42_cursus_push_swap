@@ -6,7 +6,7 @@
 /*   By: hznagui <hznagui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 15:57:19 by hznagui           #+#    #+#             */
-/*   Updated: 2022/12/26 12:42:05 by hznagui          ###   ########.fr       */
+/*   Updated: 2023/01/02 14:06:49 by hznagui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,10 +62,11 @@ void	push(t_list **stack_src, t_list **stack_dst)
 	first ->next = NULL;
 	ft_lstadd_front(stack_dst, first);
 }
+
 //------------------------------------------------------------------------//
-void ft_rr(t_list **stack1, t_list **stack2)
+void	ft_rr(t_list **stack1, t_list **stack2)
 {
-    ft_to_the_bottom(stack1);
-    ft_to_the_bottom(stack2);
-    write(1,"rr\n",3);
+	ft_to_the_bottom(stack1);
+	ft_to_the_bottom(stack2);
+	write(1, "rr\n", 3);
 }

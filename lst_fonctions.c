@@ -6,11 +6,11 @@
 /*   By: hznagui <hznagui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 13:06:44 by hznagui           #+#    #+#             */
-/*   Updated: 2022/12/29 14:32:10 by hznagui          ###   ########.fr       */
+/*   Updated: 2023/01/02 13:28:21 by hznagui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "push_swap.h"
+#include "push_swap.h"
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
@@ -39,6 +39,7 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 	new->next = *lst;
 	*lst = new;
 }
+
 //------------------------------------------------------------------------//
 t_list	*ft_lstclear(t_list **lst)
 {
@@ -55,6 +56,7 @@ t_list	*ft_lstclear(t_list **lst)
 	}
 	abort();
 }
+
 //------------------------------------------------------------------------//
 t_list	*ft_lstnew(long long *content)
 {
@@ -68,6 +70,7 @@ t_list	*ft_lstnew(long long *content)
 	p -> index = 0;
 	return (p);
 }
+
 //------------------------------------------------------------------------//
 int	ft_lstsize(t_list *lst)
 {

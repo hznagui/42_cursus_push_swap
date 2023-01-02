@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-static long long ft_return(int c)
+static long long	ft_return(int c)
 {
 	if (c == 1)
 		return (-1);
@@ -20,7 +20,7 @@ static long long ft_return(int c)
 		return (0);
 }
 
-long long ft_atoi( char *str)
+long long	ft_atoi( char *str)
 {
 	int		c;
 	size_t	z;

@@ -6,7 +6,7 @@
 /*   By: hznagui <hznagui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/28 11:21:25 by hznagui           #+#    #+#             */
-/*   Updated: 2023/01/02 13:22:01 by hznagui          ###   ########.fr       */
+/*   Updated: 2023/01/03 17:29:20 by hznagui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ void	ft_case_1(t_list **stack1)
 		while (p->next)
 			p = p->next;
 		if ((int)p->content < (int)(*stack1)->content)
-			ft_ra (stack1);
+			ft_ra(stack1);
 		else
-			ft_sa (stack1);
+			ft_sa(stack1);
 	}
 }
 
@@ -75,10 +75,10 @@ void	ft_case_4(t_list **stack1, t_list **stack2)
 	int	oldp1;
 
 	p1 = 0;
-	while (ft_lstsize(*stack1) > 15)
+	while (ft_lstsize(*stack1) > 4)
 	{
 		oldp1 = p1;
-		p1 += ft_lstsize(*stack1) / 5.39;
+		p1 += ft_lstsize(*stack1) / 5;
 		p2 = p1 - ((p1 - oldp1) / 2);
 		while (ft_lstsize(*stack2) < p1)
 		{	

@@ -6,7 +6,7 @@
 /*   By: hznagui <hznagui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 13:06:44 by hznagui           #+#    #+#             */
-/*   Updated: 2023/01/02 13:28:21 by hznagui          ###   ########.fr       */
+/*   Updated: 2023/01/03 17:33:52 by hznagui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ t_list	*ft_lstclear(t_list **lst)
 	t_list	*p;
 
 	if (!lst)
-		abort();
+		ft_abort();
 	while ((*lst))
 	{
 		p = (*lst);
@@ -54,7 +54,8 @@ t_list	*ft_lstclear(t_list **lst)
 		*lst = (*lst)->next;
 		free (p);
 	}
-	abort();
+	ft_abort();
+	return (0);
 }
 
 //------------------------------------------------------------------------//

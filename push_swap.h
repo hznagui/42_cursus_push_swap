@@ -6,7 +6,7 @@
 /*   By: hznagui <hznagui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 16:13:24 by hznagui           #+#    #+#             */
-/*   Updated: 2023/01/02 14:12:55 by hznagui          ###   ########.fr       */
+/*   Updated: 2023/01/03 17:24:29 by hznagui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,13 @@
 
 typedef struct s_list
 {
-	long long			*content;
-	struct s_list		*next;
-	int					index;
+	long long		*content;
+	struct s_list	*next;
+	int				index;
 }t_list;
 
 t_list		*ft_split(char **s, char c);
+void		ft_abort(void);
 long long	ft_atoi( char *str);
 size_t		ft_strlen(char *s);
 void		ft_lstadd_back(t_list **lst, t_list *new);

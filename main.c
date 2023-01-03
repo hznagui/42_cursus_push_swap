@@ -6,7 +6,7 @@
 /*   By: hznagui <hznagui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 12:31:40 by hznagui           #+#    #+#             */
-/*   Updated: 2023/01/02 13:33:43 by hznagui          ###   ########.fr       */
+/*   Updated: 2023/01/03 17:33:31 by hznagui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ int	main(int argc, char **argv)
 
 	if (argc == 1)
 		return (0);
+	stack2 = NULL;
 	ft_error(argv, argc);
 	stack1 = ft_split(argv, ' ');
 	ft_check_double(stack1);

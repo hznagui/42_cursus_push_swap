@@ -6,7 +6,7 @@
 /*   By: hznagui <hznagui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 12:31:40 by hznagui           #+#    #+#             */
-/*   Updated: 2023/01/03 17:33:31 by hznagui          ###   ########.fr       */
+/*   Updated: 2023/01/07 10:53:56 by hznagui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ void	push_swap(t_list *stack1, t_list *stack2)
 		else
 			ft_case_5(&stack1, &stack2);
 	}
+	ft_lstclear(&stack1);
 }
 
 int	main(int argc, char **argv)

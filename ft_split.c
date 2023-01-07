@@ -6,7 +6,7 @@
 /*   By: hznagui <hznagui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 17:11:43 by hznagui           #+#    #+#             */
-/*   Updated: 2023/01/03 17:20:56 by hznagui          ###   ########.fr       */
+/*   Updated: 2023/01/07 10:00:00 by hznagui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,8 @@ static t_list	*ft_return(char **s, char c, t_list *p)
 		if (s[h][0] == '\0')
 			return (p);
 		p = create_nodes(s, c, p, h);
+		if (!p)
+			ft_abort ();
 		if (nbr_of_words(s[h], c) == 0)
 			ft_abort ();
 		h++;

@@ -6,7 +6,7 @@
 /*   By: hznagui <hznagui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 12:33:05 by hznagui           #+#    #+#             */
-/*   Updated: 2023/01/03 17:20:44 by hznagui          ###   ########.fr       */
+/*   Updated: 2023/01/07 10:02:13 by hznagui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,12 +56,12 @@ void	ft_check_double(t_list *p)
 	while (h)
 	{
 		if ((long long)h->content > INT_MAX || (long long)h->content < INT_MIN)
-			ft_abort();
+			error_case(p);
 		o = h->next;
 		while (o)
 		{
 			if (o->content == h->content)
-				ft_abort();
+				error_case(p);
 			else
 			{
 				o = o->next;
@@ -69,4 +69,11 @@ void	ft_check_double(t_list *p)
 		}
 		h = h->next;
 	}
+}
+
+//------------------------------------------------------------------------//
+void	error_case(t_list *p)
+{
+	ft_lstclear(&p);
+	ft_abort();
 }

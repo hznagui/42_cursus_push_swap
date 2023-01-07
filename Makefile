@@ -6,7 +6,7 @@
 #    By: hznagui <hznagui@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/26 12:21:15 by hznagui           #+#    #+#              #
-#    Updated: 2023/01/03 18:32:57 by hznagui          ###   ########.fr        #
+#    Updated: 2023/01/07 10:19:57 by hznagui          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,14 +18,18 @@ PROGRAM = push_swap
 
 OBJ_FILE = $(SRC_FILE:.c=.o)
 
-all: $(NAME)
-	cc -Wall -Wextra -Werror $< -o push_swap
+%.o : %.c push_swap.h
+	cc -Wall -Wextra -Werror -c $< -o $@
+	
+$(PROGRAM):  $(NAME)
+	cc -Wall -Wextra -Werror $< -o $@
+
+all: $(PROGRAM)
+
 
 $(NAME): $(OBJ_FILE)
 	ar -rc $(NAME) $(OBJ_FILE)
 
-%.o : %.c push_swap.h
-	cc -Wall -Wextra -Werror -c $< -o $@
 
 clean:
 	rm -f $(OBJ_FILE)
@@ -33,5 +37,4 @@ clean:
 fclean:	clean
 	rm -f $(NAME) $(PROGRAM)
 	
-re: fclean $(NAME)
-
+re: fclean all
